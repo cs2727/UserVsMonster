@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Monster Game</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Philosopher&family=Space+Grotesk:wght@500&family=Viga&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Start Game Overlay -->
+    <div id="startGameOverlay">
+    </div>
+
+    <!-- Start Game Container -->
+    <div id="startGameContainer">
+        <h1>Are you ready to fight the beast?</h1>
+        <input type="button" id="startGameBtn" value="Ready" />
+
+    </div>
+
+    <!-- Audio Image Element -->
+    <img src="Images/audioOn.png" id="audioImg" title="Audio" />
+
+    <!-- Game Interface Container-->
+    <section id="gameInterface">
+
+        <!-- Round Header -->
+        <h1 id="roundHeader">Round 1 / 3</h1>
+
+        <!-- Next Round Commencing Header-->
+        <h1 id="roundCommencingHeader">Next Round Commencing...</h1>
+
+        <!-- Round Score Board -->
+        <div id="roundBoard">
+            <h1>Round Score</h1>
+            <hr>
+            <p id="userScore">User: 0</p>
+            <p id="monsterScore">Monster: 0</p>
+        </div>
+
+        <!-- Health Bar Container -->
+        <div id="healthBarContainer">
+
+            <!-- User Health Bar Container -->
+            <div id="userHealthBarContainer">
+                <label for="userHealthBar" id="userLabel">User Health</label>
+                <progress id="userHealthBar" max="100" value="100" class="greenHealthBar"></progress>
+                <p id="userHealthNumber">100</p>
+            </div>
+
+            <!-- Monster Health Bar Container -->
+            <div id="monsterHealthBarContainer">
+                <label for="monsterHealthBar" id="monsterLabel">Monster Health</label>
+                <progress id="monsterHealthBar" max="100" value="100" class="greenHealthBar"></progress>
+                <p id="monsterHealthNumber">100</p>
+            </div>
+
+            <!-- Round Context Header -->
+            <h1 id="roundContextHeader"></h1>
+        </div>
+
+
+        <!-- Button Container -->
+        <div id="buttonContainer">
+
+            <!-- Attack Button -->
+            <input type="button" value="ATTACK" id="attack-Button">
+
+            <!-- Super Attack Button -->
+            <input type="button" value="SUPER ATTACK" id="superAttack-Button">
+
+            <!-- Heal Button -->
+            <input type="button" value="HEAL" id="heal-Button">
+
+            <!-- Reset Button -->
+            <input type="button" value="RESET" id="reset-Button">
+
+        </div>
+    </section>
+
+    <!-- Frequently Answered Questions Section Container-->
+    <section id="faxContainer">
+
+        <!-- Frequently Answered Questions Header -->
+        <h1 id="faxHeader">Frequently Answered Questions</h1>
+
+        <!-- About Section -->
+        <details>
+            <summary>ABOUT</summary>
+            <p>This game will consist of 3 rounds, whoever wins 2 rounds out of 3 will win! Make sure to not lose any
+                rounds as the Monster will grow stronger per round making it more difficult to beat him.</p>
+        </details>
+    </section>
+
+
+</body>
+
+
+</html>

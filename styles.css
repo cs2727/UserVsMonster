@@ -1,0 +1,320 @@
+/* 
+FONT-FAMILIES AVALIABLE
+font-family: 'Philosopher', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+font-family: 'Viga', sans-serif 
+*/
+
+
+/* ----------------------- Body Related Stylings ------------------------------- */
+body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #323131;
+}
+
+/* ----------------------- Start Game Related Stylings ------------------------------- */
+
+/* Start Game Overlay Styling */
+#startGameOverlay {
+    position: absolute;
+    background-color: rgb(15, 15, 15);
+    opacity: 0.95;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+/* Start Game Container Styling */
+#startGameContainer {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    height: 500px;
+    width: 50%;
+    background-image: url('Images/campfire.jpg');
+    background-position: center;
+    z-index: 9;
+    border-radius: 9px;
+    border: 1px solid rgb(255, 102, 0);
+    box-shadow: 3px 3px 12px rgb(255, 102, 0), -3px -3px 12px rgb(255, 102, 0);
+}
+
+/* Start Game h1 Styling */
+#startGameContainer h1{
+    font-family: 'Philosopher', sans-serif;
+    color: orange;
+}
+
+/* Start Game Buttons Styling */
+#startGameBtn {
+    margin-top: 200px;
+    margin-left: 20px;
+}
+
+/* ----------------------- Game Interface Related Stylings ------------------------------- */
+
+/* Game Interface Styling */
+#gameInterface {
+    height: 1000px;
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* ----------------------- Round Header Related Stylings ------------------------------- */
+
+/* Round Header */
+#roundHeader {
+    position:absolute;
+    top: 30px;
+    right: 13%;
+    z-index: 1;
+    font-size: 1rem;
+    color: #f7f7f7fb;
+    margin: 0;
+}
+
+/* ----------------------- Round Commencing Header Related Stylings ------------------------------- */
+
+#roundCommencingHeader {
+    display: none; 
+    position: absolute;
+    top: 30px;
+    right: 13%;
+    z-index: 1;
+    font-size: 1rem;
+    color: #f7f7f7fb;
+    margin: 0;
+}
+
+
+/* ----------------------- Round Board Related Stylings ------------------------------- */
+
+
+/* Round Score Board Styling */
+#roundBoard {
+    position: absolute;
+    left: 0.5%;
+    height: 130px;
+    top: 30px;
+    width: 11%;
+    font-family: 'Philosopher', sans-serif;
+    background-image: url('Images/scroll.jpg');
+    border-radius: 9px;
+}
+
+/* Round Score horizontal line Styling */
+#roundBoard hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+    margin: 0;
+}
+
+/* Round Score header Styling */
+#roundBoard h1 {
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 55%;
+}
+
+/* Round Score paragraph Styling */
+#roundBoard p {
+    margin: 0;
+    margin: 20px 0 10px 10px;
+    font-size: 1.2rem;
+}
+
+
+
+/* --------------------- Health Bar Numbers Related Stylings ------------------------------- */
+
+#userHealthNumber, #monsterHealthNumber {
+    position: absolute;
+    font-size: 1rem;
+    top: 45px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/* --------------------- Round Context Header Related Stylings ------------------------------- */
+
+
+#roundContextHeader{
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2rem;
+    color: gold;
+    margin: 0;
+}
+
+
+
+/* ----------------------- HealthBar Container Related Stylings ------------------------------- */
+
+/* HealthBar Container Styling */
+#healthBarContainer {
+    background-image: url('Images/knightVsMonster.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 810px;
+    width: 75%;
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: top;
+    border-radius: 9px;
+    border: 1px solid gold;
+    box-shadow: 3px 3px 12px rgba(230, 226, 14, 0.836), -3px -3px 12px rgba(230, 226, 14, 0.836);
+}
+
+
+/* User and Monster Bar Container stylings */
+#userHealthBarContainer, #monsterHealthBarContainer {
+    height: 100px;
+    width: 75%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    color: gold;
+}
+
+/* ----------------------- HealthBar Related Stylings ------------------------------- */
+
+/*
+<Progress>
+<div> This div represents the progress bar
+<div> This div represents the progress value 
+</div>
+</div>
+</Progress> 
+*/
+
+/* Progress Element Styling */
+progress[value] {
+    height: 25%;
+    width: 60%;
+}
+
+/* Progress Bar Styling */
+progress[value]::-webkit-progress-bar,
+progress[value] {
+  background-color: #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/*  Progress Value Styling (Green Health)*/
+.greenHealthBar::-webkit-progress-value {
+  background-color: rgba(25, 221, 25, 0.918);
+  transition: all 0.4s ease-out;
+}
+
+/*  Progress Value Styling (Yellow Health)*/
+.yellowHealthBar::-webkit-progress-value {
+    background-color: rgb(252, 252, 26);
+    transition: all 0.4s ease-out;
+}
+
+/*  Progress Value Styling (Red Health)*/
+.redHealthBar::-webkit-progress-value {
+    background-color: rgb(206, 0, 0);
+    transition: all 0.4s ease-out;
+}
+
+
+/* --------------------- Button Related Stylings ------------------------------- */
+
+/* Button Container Styling */
+#buttonContainer {
+    height: 130px;
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 9px;
+}
+
+/* Buttons Styling */
+input[type="button"] {
+    height: 59px;
+    width: 220px;
+    padding: 0%;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    background-color: rgb(57, 243, 40);
+    color: black;
+    font-family: 'Viga', sans-serif;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Buttons styling when hovered over */
+input[type="button"]:hover {
+    background-color: #a927f5;
+}
+
+/*Buttons Styling if disabled */
+input[type="button"]:disabled {
+    cursor: auto;
+    opacity: 0.4;
+}
+
+
+/* --------------------- Frequently Asked Questions Container Related Stylings ------------------------------- */
+
+/*  Frequently Asked Questions Container */
+#faxContainer {
+    width: 25%;
+    background-image: url('Images/scroll.jpg');
+    margin-left: 15%;
+    margin-bottom: 15px;
+    padding: 10px;
+    color: black;
+}
+
+/*  Frequently Asked Questions Header Styling */
+#faxHeader {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+/*  Frequently Asked Questions details Container Styling */
+details {
+ margin: 15px 0;
+}
+
+details summary{
+    font-size: 1.2rem;
+}
+
+/* --------------------- Audio Img Related Stylings ------------------------------- */
+
+#audioImg {
+    position: absolute;
+    top: 800px;
+    left: 13%; 
+    cursor: pointer;
+    height: 20px;
+    width: 30px;
+    z-index: 1;
+}
+
